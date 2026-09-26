@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ছবি ওয়ালা | মিষ্টি মুহূর্তের গল্প বলে</title>
+
+    <meta name="description"
+          content="ছবি ওয়ালা — আপনার জীবনের বিশেষ মুহূর্তগুলোকে সুন্দর ছবিতে ধরে রাখার বিশ্বস্ত ঠিকানা।">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans Bengali", sans-serif;
+            background: #F5F2EA;
+            color: #B22222;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title .small-title {
+            color: F4C542;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: #aaa;
+            max-width: 650px;
+            margin: 15px auto 0;
+        }
+
+        .gold {
+            color: F4C542;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 27px;
+            border: 1px solid F4C542;
+            color: #ffffff;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: F4C542;
+            color: #000;
+        }
+
+        .btn-gold {
+            background: F4C542;
+            color: #000;
+        }
+
+        .btn-gold:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(0,0,0,0.90);
+            border-bottom: 1px solid rgba(214,173,91,0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: #eee;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: F4C542;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: F4C542;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+                url("images/hero.jpg") center/cover no-repeat;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+transform: translate(250px,200px);
+        }
+
+        .hero-small {
+            color: #F4C542;
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #F4C542;
+        }
+
+        .hero p {
+            color: #ddd;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #0d0d0d;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #aaa;
+            margin-bottom: 18px;
+        }
+
+        .about-points {
+            margin-top: 25px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .about-points div {
+            border-left: 2px solid #F4C542;
+            padding-left: 15px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 35px 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #F4C542;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color: #999;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: #0d0d0d;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-item {
+            height: 330px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================
+           WEDDING PACKAGES
+        ========================= */
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .package {
+            background: #111;
+            border: 1px solid #292929;
+            padding: 35px 28px;
+            position: relative;
+        }
+
+        .package.featured {
+            border-color: #F4C542;
+        }
+
+        .package-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #F4C542;
+            color: #000;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .package h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            color: #F4C542;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .package ul {
+            list-style: none;
+            margin: 20px 0 30px;
+        }
+
+        .package li {
+            padding: 8px 0;
+            color: #aaa;
+            border-bottom: 1px solid #222;
+        }
+
+        .package li::before {
+            content: "✓ ";
+            color: #F4C542;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            background: #0d0d0d;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #111;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 22px;
+        }
+
+        .product-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: #999;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .why-number {
+            font-size: 40px;
+            color: F4C542;
+            font-weight: 800;
+        }
+
+        .why-card h3 {
+            margin: 8px 0;
+        }
+
+        .why-card p {
+            color: #999;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #0d0d0d;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: F4C542;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 14px;
+            background: #111;
+            border: 1px solid #333;
+            color: #F4C542;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: F4C542;
+        }
+
+        .contact-form textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #050505;
+            border-top: 1px solid #222;
+            padding: 45px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 65px;
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            color: F4C542;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer li {
+            color: #888;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #1c1c1c;
+            padding-top: 20px;
+            color: #666;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: #080808;
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 0;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .packages-grid,
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .services-grid,
+            .packages-grid,
+            .products-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .logo img {
+                height: 52px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="ছবি ওয়ালা">
+            </a>
+
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                <li><a href="#services">পরিষেবা</a></li>
+                <li><a href="#gallery">গ্যালারি</a></li>
+                <li><a href="#packages">প্যাকেজ</a></li>
+                <li><a href="#products">পণ্য</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                আপনাকে স্বাগতম
+            </div>
+
+            <h1>
+                <span>ছবি ওয়ালা</span>
+                <br>
+                মিষ্টি মুহূর্তের গল্প বলে
+            </h1>
+
+            <p>
+                আপনার জীবনের প্রতিটি বিশেষ মুহূর্তকে
+                সুন্দর ছবি ও স্মৃতিতে ধরে রাখাই আমাদের কাজ।
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#packages" class="btn btn-gold">
+                    প্যাকেজ দেখুন
+                </a>
+
+                <a href="#contact" class="btn">
+                    যোগাযোগ করুন
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                আমাদের সম্পর্কে
+            </div>
+<div class="social-links">
+  <a href="https://www.instagram.com/_c_h_o_b_i_._w_a_l_a_?stkn=c3QxbHZ6cG52MWNn" target="_blank" rel="noopener">
+    📷 Instagram
+  </a>
+
+  <a href="https://www.facebook.com/share/17RM87f6tG/" target="_blank" rel="noopener">
+    👍 Facebook
+  </a>
+</div>
+            <h2>
+                <span class="gold">ছবি ওয়ালা</span> কে?
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-image">
+                <img src="images/about.jpg" alt="ছবি ওয়ালা স্টুডিও">
+            </div>
+
+
+            <div class="about-content">
+
+                <h2>
+                    স্মৃতি থাকুক <span class="gold">চিরকাল</span>
+                </h2>
+
+                <p>
+                    ছবি ওয়ালা শুধুমাত্র একটি ফটো স্টুডিও নয়।
+                    আপনার জীবনের গুরুত্বপূর্ণ মুহূর্তগুলোকে
+                    সুন্দরভাবে ধরে রাখার একটি নির্ভরযোগ্য ঠিকানা।
+                </p>
+
+                <p>
+                    বিয়ে, জন্মদিন, অন্নপ্রাশন, প্রি-ওয়েডিং,
+                    অন্নপ্রাশন থেকে শুরু করে বিভিন্ন
+                    ধরনের ফটোগ্রাফি ও ফটো প্রিন্টিং পরিষেবা
+                    আমরা দিয়ে থাকি।
+                </p>
+
+
+                <div class="about-points">
+
+                    <div>
+                        উন্নতমানের ক্যামেরা ও সরঞ্জাম
+                    </div>
+
+                    <div>
+                        অভিজ্ঞ ফটোগ্রাফি পরিষেবা
+                    </div>
+
+                    <div>
+                        যত্নসহকারে ছবি এডিটিং
+                    </div>
+
+                    <div>
+                        মানসম্মত প্রিন্ট ও অ্যালবাম
+                    </div>
+                        <div class="social-links">
+ </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                আমাদের পরিষেবা
+            </div>
+
+            <h2>
+                আমরা যা <span class="gold">করে থাকি</span>
+            </h2>
+
+            <p>
+                আপনার প্রয়োজন অনুযায়ী বিভিন্ন ধরনের
+                ফটোগ্রাফি ও স্টুডিও পরিষেবা।
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <img src="images/wtyp.jpg" >
+
+                <div class="service-icon">📸</div>
+
+                <h3>
+                    বিয়ের ফটোগ্রাফি
+                </h3>
+
+                <p>
+                    আপনার বিয়ের প্রতিটি বিশেষ মুহূর্ত
+                    সুন্দরভাবে ক্যামেরাবন্দি করা।
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+              
+                    <img src="images/wedding2.jpg">
+
+                <div class="service-icon">💍</div>
+
+                <h3>
+                    প্রি-ওয়েডিং
+                </h3>
+
+                <p>
+                    আপনার ভালোবাসার গল্পকে
+                    সিনেমাটিক ছবির মাধ্যমে তুলে ধরা।
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+              <img src="images/wedding3.jpg">
+
+                <div class="service-icon">🧒</div>
+
+                <h3>
+                    অন্নপ্রাশন
+                </h3>
+
+                <p>
+                    পরিবারের সুন্দর মুহূর্তগুলো
+                    স্মৃতি হিসেবে ধরে রাখুন।
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+<img src="images/wedding4.jpg">
+
+
+                <div class="service-icon">🎭</div>
+
+                <h3>
+                    MODEL PHOTOSHOOT
+                </h3>
+
+                <p>
+                    “নজরকাড়া কিন্তু সংযত, প্রতিটি ফ্রেমে ফ্যাশনের গল্প।
+                      আত্মবিশ্বাসের সাথে নিজেকে প্রকাশ করুন।”
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                      <img src="images/wedding5.jpg">
+
+               
+
+                <div class="service-icon">🪔</div>
+
+                <h3>
+                    RING CEREMONY
+                </h3>
+
+                <p>
+                    বিভিন্ন সাইজে উন্নতমানের
+                    ছবি প্রিন্ট পরিষেবা।
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+  
+              <img src="images/wedding6.jpg">
+
+
+                <div class="service-icon">💞</div>
+
+                <h3>
+                    ANNIVERSARY
+                </h3>
+
+                <p>
+                    আপনার প্রিয় ছবিগুলো দিয়ে
+                    সুন্দর ডিজাইনের অ্যালবাম।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section gallery" id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                আমাদের কাজ
+            </div>
+
+            <h2>
+                ছবিতে <span class="gold">কিছু গল্প</span>
+            </h2>
+
+            <p>
+                আমাদের ক্যামেরায় ধরা কিছু সুন্দর মুহূর্ত।
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <img src="images/photo1.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo2.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo3.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo4.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo5.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/photo6.jpg" alt="ফটোগ্রাফি">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WEDDING PACKAGES
+========================= -->
+
+<section class="section" id="packages">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                বিবাহের প্যাকেজ
+            </div>
+
+            <h2>
+                আপনার জন্য <span class="gold">সঠিক প্যাকেজ</span>
+            </h2>
+
+            <p>
+                আপনার অনুষ্ঠানের প্রয়োজন অনুযায়ী
+                প্যাকেজ বেছে নিন।
+            </p>
+
+        </div>
+
+
+        <div class="packages-grid">
+
+
+            <!-- PACKAGE 1 -->
+
+            <div class="package">
+
+                <h3>
+                    SILVER PACKAGE
+                </h3>
+
+                <ul>
+
+                    <li>২ দিনের ওয়েডিং ফটোগ্রাফি ও ভিডিওগ্রাফি কভারেজ</li>
+
+                    <li>বেসিক ভিডিও</li>
+
+                    <li>কাস্টম ডিজাইন করা অ্যালবাম ১২×৩৬, ২০ পেজ, ১৫০ ফটো</li>
+
+                    <li>২ জন ফটোগ্রাফার ও ভিডিওগ্রাফার</li>
+
+                    <li>১টি এইচডি ট্র্যাডিশনাল ভিডিও পেনড্রাইভসহ</li>
+
+                    <li> “ছবি ওয়ালা” থেকে উপহার </li>
+
+                </ul>
+<div class="package-price">
+
+
+    <div class="price-box">
+        <span>BRIDE</span>
+        <strong>₹16,999</strong>
+    </div>
+
+    <div class="price-box">
+        <span>GROOM</span>
+        <strong>₹18,999</strong>
+
+
+</div>
+
+                </div>
+
+                <a href="#contact" class="btn">
+                    FOR MORE INFO
+                </a>
+
+            </div>
+
+
+
+            <!-- PACKAGE 2 -->
+
+            <div class="package featured">
+
+                <div class="package-label">
+                    জনপ্রিয়
+                </div>
+
+                <h3>
+                    PLATINUM PACKAGE
+                </h3>
+
+               
+
+                <ul>
+
+                    <li>ফুল-ডে ওয়েডিং ফটোগ্রাফি কভারেজ</li>
+
+                    <li>সিনেমাটিক ভিডিও</li>
+
+                    <li>প্রফেশনাল এডিটিং</li>
+
+                    <li>প্রিমিয়াম কাস্টম ডিজাইন অ্যালবাম, ২৫ পেজ, ১৮০ ফটো</li>
+
+                    <li>প্রফেশনাল ক্যামেরা সহ। আনলিমিটেড হাই-রেজোলিউশন ফটোস</li>
+
+                    <li> “ছবি ওয়ালা” থেকে উপহার </li>
+                   
+                     <li> ট্রেলারসহ ফুল সিনেম্যাটিক ভিডিও</li>
+ <div class="package-price">
+
+
+    <div class="price-box">
+        <span>BRIDE</span>
+        <strong>₹24,999</strong>
+    </div>
+
+    <div class="price-box">
+        <span>GROOM</span>
+        <strong>₹26,999</strong>
+
+
+                </div>
+
+                </ul>
+
+               <a href="#contact" class="btn">
+                    FOR MORE INFO
+                </a>
+
+            </div>
+
+
+
+            <!-- PACKAGE 3 -->
+
+            <div class="package">
+
+                <h3>
+                    GOLD PACKAGE
+                </h3>
+
+                
+
+                <ul>
+
+                    <li>২ দিনের ওয়েডিং ফটোগ্রাফি কভারেজ </li>
+
+                    <li>প্রফেশনাল ক্যামেরাস সহ ২ জন ফটোগ্রাফার ও ভিডিওগ্রাফার</li>
+
+                    <li>প্রি-ওয়েডিং শুট</li>
+
+                    <li>২৫ পেজের প্রিমিয়াম কাস্টম অ্যালবাম, ১৮০ ফটো </li>
+
+                    <li>ট্রেলারসহ ফুল সিনেম্যাটিক ভিডিও</li>
+
+                    <li> ১০০টি এডিটেড ডিজিটাল ফটো </li>
+
+                    <li> “ছবি ওয়ালা” থেকে উপহার </li>
+                </ul>
+<div class="package-price">
+
+
+    <div class="price-box">
+        <span>BRIDE</span>
+        <strong>₹29,999</strong>
+    </div>
+
+    <div class="price-box">
+        <span>GROOM</span>
+        <strong>₹31,999</strong>
+
+
+            </div>
+
+
+  
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="section products" id="products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                আমাদের পণ্য
+            </div>
+
+            <h2>
+                আপনার ছবির জন্য <span class="gold">সুন্দর সংগ্রহ</span>
+            </h2>
+
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <div class="product-card">
+
+                <img src="images/product1.jpg" alt="ফটো ফ্রেম">
+
+                <div class="product-info">
+
+                    <h3>
+                        ফটো ফ্রেম
+                    </h3>
+
+                    <p>
+                        আপনার প্রিয় ছবিকে
+                        সুন্দর ফ্রেমে সাজিয়ে নিন।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="images/product2.jpg" alt="ফটো অ্যালবাম">
+
+                <div class="product-info">
+
+                    <h3>
+                        ফটো অ্যালবাম
+                    </h3>
+
+                    <p>
+                        বিশেষ মুহূর্তগুলোকে
+                        সুন্দর অ্যালবামে সংরক্ষণ করুন।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="images/product3.jpg" alt="ফটো প্রিন্ট">
+
+                <div class="product-info">
+
+                    <h3>
+                        ফটো প্রিন্ট
+                    </h3>
+
+                    <p>
+                        বিভিন্ন সাইজে
+                        উন্নতমানের ফটো প্রিন্ট।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                কেন ছবি ওয়ালা?
+            </div>
+
+            <h2>
+                আপনার স্মৃতি আমাদের <span class="gold">দায়িত্ব</span>
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    ০১
+                </div>
+
+                <h3>
+                    যত্ন
+                </h3>
+
+                <p>
+                    প্রতিটি ছবির প্রতি বিশেষ যত্ন।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    ০২
+                </div>
+
+                <h3>
+                    মান
+                </h3>
+
+                <p>
+                    উন্নতমানের ছবি ও প্রিন্ট।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    ০৩
+                </div>
+
+                <h3>
+                    সৃজনশীলতা
+                </h3>
+
+                <p>
+                    আধুনিক ও সুন্দর ডিজাইনের কাজ।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-number">
+                    ০৪
+                </div>
+
+                <h3>
+                    বিশ্বাস
+                </h3>
+
+                <p>
+                    আপনার বিশেষ দিনের স্মৃতির প্রতি দায়বদ্ধতা।
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                যোগাযোগ
+            </div>
+
+            <h2>
+                আপনার গল্প <span class="gold">শুরু হোক</span>
+            </h2>
+
+            <p>
+                ফটোগ্রাফি বা যেকোনো পরিষেবা সম্পর্কে
+                জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    <span class="gold">ছবি ওয়ালা</span>
+                </h2>
+
+                <p>
+                    মিষ্টি মুহূর্তের গল্প বলে।
+                    আপনার প্রিয় মুহূর্তগুলোকে
+                    আমরা ছবিতে ধরে রাখি।
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        ফোন
+                    </strong>
+
+                    9883211498
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        পরিষেবা
+                    </strong>
+
+                    ফটোগ্রাফি • ভিডিও • ফটো প্রিন্ট • অ্যালবাম
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>
+                        সময়
+                    </strong>
+
+                    আপনার সুবিধা অনুযায়ী যোগাযোগ করুন।
+
+                </div>
+
+
+            </div>
+
+
+
+            <form class="contact-form" onsubmit="sendWhatsApp(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="আপনার নাম"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="আপনার মোবাইল নম্বর"
+                    required
+                >
+
+                <select id="service" required>
+
+                    <option value="">
+                        পরিষেবা নির্বাচন করুন
+                    </option>
+
+                    <option>
+                        বিয়ের ফটোগ্রাফি
+                    </option>
+
+                    <option>
+                        প্রি-ওয়েডিং
+                    </option>
+
+                    <option>
+                        ফ্যামিলি ফটোশুট
+                    </option>
+
+                    <option>
+                        জন্মদিনের ফটোগ্রাফি
+                    </option>
+
+                    <option>
+                        ফটো প্রিন্ট
+                    </option>
+
+                    <option>
+                        ফটো অ্যালবাম
+                    </option>
+
+                    <option>
+                        অন্যান্য
+                    </option>
+
+                </select>
+
+
+                <textarea
+                    id="message"
+                    placeholder="আপনার প্রয়োজন বা অনুষ্ঠানের বিস্তারিত লিখুন..."
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-gold"
+                >
+                    হোয়াটসঅ্যাপে পাঠান
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <img
+                        src="images/logo.png"
+                        alt="ছবি ওয়ালা"
+                    >
+
+                </div>
+
+                <p>
+                    মিষ্টি মুহূর্তের গল্প বলে।
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    দ্রুত লিংক
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            হোম
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            পরিষেবা
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery">
+                            গ্যালারি
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            যোগাযোগ<a href="https://www.facebook.com/share/17RM87f6tG/" target="_blank" rel="noopener">
+    👍 Facebook
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    যোগাযোগ<div class="social-links">
+  <a href="https://www.instagram.com/_c_h_o_b_i_._w_a_l_a_?stkn=c3QxbHZ6cG52MWNn" target="_blank" rel="noopener">
+    📷 Instagram
+  </a>
+
+  
+  </a>
+</div>
+                </h3>
+
+                <p>
+                    ফোন:9883211498
+                </p>
+
+                <p>
+                    ছবি ওয়ালা
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © ২০২৬ ছবি ওয়ালা — সর্বস্বত্ব সংরক্ষিত।
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919883211498"
+    target="_blank"
+    aria-label="হোয়াটসঅ্যাপ"
+>
+    ☎
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("active");
+
+    }
+
+
+    // মোবাইলে মেনুতে ক্লিক করলে মেনু বন্ধ হবে
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+
+
+    // Contact Form → WhatsApp
+
+    function sendWhatsApp(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+        const phone =
+            document.getElementById("phone").value;
+
+        const service =
+            document.getElementById("service").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        const whatsappMessage =
+            "নমস্কার ছবি ওয়ালা,%0A%0A" +
+
+            "নাম: " + encodeURIComponent(name) +
+            "%0A" +
+
+            "মোবাইল: " + encodeURIComponent(phone) +
+            "%0A" +
+
+            "পরিষেবা: " + encodeURIComponent(service) +
+            "%0A" +
+
+            "বিস্তারিত: " +
+            encodeURIComponent(message);
+
+
+        const whatsappURL =
+            "https://wa.me/919883211498?text=" +
+            whatsappMessage;
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>
